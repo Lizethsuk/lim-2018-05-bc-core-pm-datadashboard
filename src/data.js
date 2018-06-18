@@ -1,3 +1,18 @@
+window.data = {
+  computeUsersStasts: () => {
+    
+  },
+  sortUsers: () => {
+
+  },
+  filterUsers: () => {
+
+  },
+  prcessCohortData: () => {
+    
+  } 
+}
+
 let nombreUsuarios = document.getElementById('nombre');
 let cohorts = document.getElementById('cohorts')
 
