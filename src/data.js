@@ -93,39 +93,35 @@ window.computeUsersStats = (users, progress, courses) => {
 window.sortUsers = (users, orderBy, orderDirection) => {
   let usersSort = users;
   if (orderDirection.length !== 0) {
-    if (orderBy.length !== 0) {
-      usersSort = users.sort((a, b) => {
-        if (orderBy === "name") {
-          let nameCompare = a.name.localeCompare(b.name);
-          return nameCompare;
-        } else if (orderBy === "percent") {
-          if (a.stats[orderBy] > b.stats[orderBy]) return 1;
-          if (a.stats[orderBy] < b.stats[orderBy]) return -1;
-          return 0;
-        } else if (orderBy === "exercises" || orderBy === "quizzes" || orderBy === "reads") {
-          if (a.stats[orderBy].percent > b.stats[orderBy].percent) return 1;
-          if (a.stats.exercises.percent < b.stats[orderBy].percent) return -1;
-          return 0;
-        } else if (orderBy === "scoreSum" || orderBy === "scoreAvg") {
-          if (a.stats.quizzes[orderBy] > b.stats.quizzes[orderBy]) return 1;
-          if (a.stats.quizzes[orderBy] < b.stats.quizzes[orderBy]) return -1;
-          return 0;
-        }
-      })
-    }
+    usersSort = users.sort((a, b) => {
+      if (orderBy === "name") {
+        let nameCompare = a.name.localeCompare(b.name);
+        return nameCompare;
+      } else if (orderBy === "percent") {
+        if (a.stats[orderBy] > b.stats[orderBy]) return 1;
+        if (a.stats[orderBy] < b.stats[orderBy]) return -1;
+        return 0;
+      } else if (orderBy === "exercises" || orderBy === "quizzes" || orderBy === "reads") {
+        if (a.stats[orderBy].percent > b.stats[orderBy].percent) return 1;
+        if (a.stats[orderBy].percent < b.stats[orderBy].percent) return -1;
+        return 0;
+      } else if (orderBy === "scoreSum" || orderBy === "scoreAvg") {
+        if (a.stats.quizzes[orderBy] > b.stats.quizzes[orderBy]) return 1;
+        if (a.stats.quizzes[orderBy] < b.stats.quizzes[orderBy]) return -1;
+        return 0;
+      }
+    })
     if (orderDirection === "DESC") {
       usersSort = usersSort.reverse();
     }
-  }  
+  }
   return usersSort;
 }
 
 window.filterUsers = (users, search) => {
   let usersFilter = users;
-  if (search.length !== 0) {
-    search = search.toLowerCase();
-    usersFilter = users.filter(user => user.name.toLowerCase().indexOf(search) >= 0)
-  }
+  search = search.toLowerCase();
+  usersFilter = users.filter(user => user.name.toLowerCase().indexOf(search) >= 0)
   return usersFilter;
 }
 

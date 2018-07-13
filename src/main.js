@@ -86,14 +86,14 @@ chooseCountry.addEventListener('change', () => {                 //hacemos una f
         if (splitCohort[0] === chooseCountry.value) {           //creamos una condicion, el valor del html debe coincidir con la posicion 0 del string separada por -
           output +=
             `<option disabled selected hidden>Escoge tu cohort</option>
-          <option value =${cohortsIds}>${cohortsIds}</option>`;       //
+          <option value =${cohortsIds}>${cohortsIds}</option>`;       
         }
       }
-      chooseCohort.innerHTML = output;                                                     //
+      chooseCohort.innerHTML = output;                                                     
     })
 })
 
-chooseCohort.addEventListener('change', () => {                           //creamos una funcion para obtener  
+chooseCohort.addEventListener('change', () => {                          
   fetch('../data/cohorts.json')
     .then(response => response.json())
     .then(selectCohort => {
@@ -103,12 +103,12 @@ chooseCohort.addEventListener('change', () => {                           //crea
         }
       });
     })
-  fetch(`../data/cohorts/${chooseCohort.value}/users.json`)          //realizamos un fetch para obtener los datos de USERS.JSON   //
+  fetch(`../data/cohorts/${chooseCohort.value}/users.json`)          
     .then(response => response.json())
-    .then(arrUsers => {                                                   //obtenemos a los usuarios {}                                       
-      fetch(`../data/cohorts/${chooseCohort.value}/progress.json`)   // 
+    .then(arrUsers => {                                                                                     
+      fetch(`../data/cohorts/${chooseCohort.value}/progress.json`)    
         .then(response => response.json())
-        .then(objectProgress => { //obtenemos el progreso de las estudiantes
+        .then(objectProgress => { 
           options.cohortData.users = arrUsers;
           options.cohortData.progress = objectProgress;
           let usersWithProgress = processCohortData(options);
