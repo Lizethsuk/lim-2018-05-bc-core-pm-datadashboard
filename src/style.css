@@ -1,241 +1,641 @@
+/*'Open Sans', sans-serif;*/
+/*font-family: 'Bitter', serif;*/
+
 html *{
-    font-family:oswald; 
-   
- }
- 
- /*inicio*/
- 
- .bodyinicio {
-    background-color: rgb(255, 229 , 33);
-    background-image: url("https://crisescobar.files.wordpress.com/2018/06/imageninicio1.jpg");
- background-repeat: no-repeat;
- display: flex;
- min-height:100vh;
- float: right;
- width: 45%;
- 
- 
- }
- 
- #formulario {
-    margin:auto;
-    width: 300px;
-    max-width:500px;
-    background: #F3F3F3;
-    padding:30px;
-    border: 1px solid (rgba(0,0,0.2));
- 
- }
- h2 {
-    text-align:center;
-    margin-bottom:20px;
-    color: black;
- }
- 
- .usuario, .contraseña, .entrar {
-   
-    display:block;
-    padding:10px;
-    width:80%;
-    margin:20px 0;
-    font-size: 15px;
-   
- }
- 
- .entrar {
-    background: black;
-    color:white;
-    cursor: pointer;
- 
- }
- 
- .entrar:hover {
-    background: rgb(51, 51, 51);
- }
- 
- .entrar:active {
-    transform: scale(0.95);
- }
- 
- 
- 
- 
-    /* head */
-   
-    h1{
-    background-color: rgb(255, 229 , 33)
- 
-  
-    }
-    .titulo{
-    padding-left: 10px;
-    padding-bottom: 25px;
-    padding-top: 20px;
-    font-size: 35px;
-    color: black;
-    width: 120%;
-     }
- /*menu lateral*/
- *{
     margin:0px;
-     padding:0px;
-    
+    padding:0px;
+}
+
+
  
- }
- #barra-lateral{
-     position:fixed;
-     width:65px;
-     height:100%;
-     background-color:#2f3030;
-     overflow:hidden;
-     -webkit-transition:width 0.5s cubic-bezier(.61,.01,.37,1);
-     color:#bcbcbc;
-     position:fixed;
-     text-decoration:none;
-    
-    
-    
- }
- #barra-lateral:hover{
-     width:170px;
-     position:fixed;
-     text-decoration:none;
-    
-    
- 
- }
- #logo-menu{
-     width:30px;
-     height:30px;
-     margin:10px;
-     background-image:url(https://crisescobar.files.wordpress.com/2018/06/menu.png);
-     text-decoration:none;
-     cursor: pointer;
- }
- #contenedor-logos-primero{
-     margin-top:70px;
- 
-    
+/* head */
    
-    
- }
- .contenedor-logos{
-     margin-top:20px;
-     margin-left:10px;
-     width:130px;
-    height:40px;
+.header{
+    margin-right:-150px;
+    background-color: rgb(255, 229 , 33);
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right:0%;
+    border-right:0%;
+    padding-bottom: 2%;
+}
+
+.logo {                   
+    width:20%;
+    padding-left: 1%; 
+}
+
+.block-header {
+    padding-left: 50%;
+}
+
+.profilePhoto {
+    width:40px;
+    border-radius:20px;  
+}
+
+.sub-block {
+    display:inline-block;
+}
+
+.block-header, logo, profilePhoto {
+    display: inline;
+    font-family: 'Bitter', serif;
+    font-weight:700;
+    font-size: 16px;    
+}
+
+.line2 {
     display:block;
-    text-decoration:none;
-   
- }
- 
- .contenedor-logos:hover{
-    background: #494b4b;
- }
- 
- 
- .logo1{
-     width:20px;
-     height:20px;
-     background-image: url(https://crisescobar.files.wordpress.com/2018/06/book-icon-1461-e1528947899267.png);
-    float: left;
-    size: 100%;
-    margin-left: 6px;
-    margin-top: 10px;
-    text-decoration:none;
-   
- 
- }
- 
- .logo2{
-    width:30px;
-    height:30px;
-    background-image: url(https://crisescobar.files.wordpress.com/2018/06/person-e1528946694339.png);
-   float: left;
-   size: 100%;
-   text-decoration:none;
- }
- .title-menu{
-     margin-left:60px;
-    line-height: 40px;
-    text-decoration:none;
-    color: rgb(255, 229 , 33);
- }
- 
- .botonmenu{
-    list-style:none;
-    display:block;
- 
- }
- 
- 
- /*body*/
- #seccion-general {
-    width:90%;
-    min-height:300px;
-   float:left;
-   color: black;
-   position:absolute;
-   right:0px;
-   min-height:300px;
-   left:170px; 
- }
- #texto-contenedor-2{
-    font-size: 50px;
-    margin: 10px;
-    height: 150px;
-    color:rgb(255, 255, 255);
-    background-image: url(https://crisescobar.files.wordpress.com/2018/06/lab-cort-e1528956254938.jpg);
- }
- #seccion-alumnas{
-     width:90%;
-     min-height:300px;
-    float:left;
-    color: black;
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+    background-color: rgb(255, 204, 0);
+}
+  
+/* menu lateral */
+
+.lateral-menu{
     position:absolute;
-    right:0px;
-    min-height:300px;
-    left:170px; 
-   
-  
- }
- #texto-contenedor-1{
-    font-size: 50px;
-    margin: 10px;
-    height: 150px;
-    color:rgb(255, 255, 255);
-    background-image: url(https://crisescobar.files.wordpress.com/2018/06/lab-cort-e1528956254938.jpg);
-  
- }
- .imagendestacada {
+    padding-top:5%;
+    width:170px;
+    height:100%;
+    background-color:black;
+    color:#bcbcbc;
+    font-family: 'Bitter', serif;
+    font-weight:700;
+    border-left:0px;
+}
+
+
+.menu-option1, .menu-option2{
+    margin-top:20px;
+    width:130px;
+    height:40px;
+    display:block;  
+}
+ 
+.menu-option1:hover, .menu-option2:hover{
+    background: #494b4b;
+}
+ 
+.title-menu1, .title-menu2{ 
+    margin-left:30px;
+    text-decoration:none;
+    color: rgb(255, 229 , 33);   
+}
+ 
+/*body*/
+
+#seccion-alumnas, #seccion-general {
+    margin-left:200px; 
+    width:90%;   
+    color: black;
+    padding-left:2%;
+}
+
+.title-alumnas, .title-general {  
+    padding-top: 1%;
+    padding-left: 2%;
+    font-size: 25px;
+    color:white;
+    font-family: 'Bitter', serif;
+    font-weight:700;
+}
+
+.featured-photo {  
+    margin: 1% 0% 0% 0%;
+    height: 150px;    
+    background-image: url(https://crisescobar.files.wordpress.com/2018/06/hackathon-1-prueba1-e1529960874489.jpg);
+    width: 87%;
     background-repeat: no-repeat;
+    opacity:0.8;
+}
+ 
+.nombre {
+    color: black;
+}
+
+#eligeuncohort {
+    margin: 1%; 
+    color: rgb(0, 0, 0);
+}
+
+#seccion-general{
+    display: none;
+}
+  
+/*tabla*/
+a {
+    text-decoration:none;
+}
+
+tr {                                                      
+    text-align: center;  
+}
+ 
+#nombrestabla {                                           
+    text-align: left;      
+}
+
+.select1, .select2 {             
+    color: black; 
+    background-color: rgb(255, 229, 33);     
+    border: none;                               
+    margin-top: 2%;   
+    margin-bottom:0px;
+    margin-left: 0%;
+    padding-left: 5px;                                         
+    font-family: 'Bitter', serif;
+    font-weight:700;
+    width: 30%;
+    border-radius: 5px;
+}
+
+.select3, .select4, .search1 {
+    color: black;     
+    border:none;                                    
+    margin: 2%;   
+    margin-left: 0%;
+    background-color: #f3f3f3;
+    padding-left: 5px;                                         
+    border-radius: 5px;
+    font-family: 'Bitter', serif;
+}
+
+option {
+    background-color:white;
+}
+
+.search1 {
+    width: 250px;
+    font-weight:700;
+    height:25px;
+}
+
+th {                                                       
+       
+    width: 15%;
+    font-weight: normal;    
+    padding: 0.5%;    
+    background: rgb(86, 248, 154);
+
+    border-bottom: 5px solid #fff; 
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: 'Bitter', serif;
+    font-weight:700;
+}
+
+.listado {                                               
+    margin-left: 0%;  
+}
+
+td {     
+    padding: 8px;    
+    background: rgb(240, 240, 240);  
+    border-bottom: 1px solid rgb(216, 216, 216);
+    color: rgb(42, 42, 43);  
+    border-top: 1px solid transparent;
+    font-family: 'Open Sans', serif; 
+}
+
+tr:hover td {
+    background: rgb(228, 225, 225); 
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.scroll {
+    overflow: scroll;
+    width: 85%;
+    height:330px;
+}
+
+/* GENERAL */
+
+.general-photo {
+    width: 20%;
+}
+
+.general-info {
+    font-family: 'Bitter', serif;
+    font-size: 17px;
+}
+
+.general-title {
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    font-size: 60px;    
+    margin-top: 5%;
+    color:fuchsia;
+    font-size: 50px;  
+}
+.general-photo2 {
+    width: 40%;
+    position:absolute;
+    padding-left:40%;
+}
+.general-block1, .general-block2, .general-block3{
+    float: left;
+    margin-top:40px;
+    width: 15%;
+    background:rgb(243, 243, 243);
+    padding: 20px;
+    text-align: center;
+    height: 120px;
+    display:inline;
+    font-family: 'Bitter', serif;
+    color:black;   
+    font-weight: 700;
+}
+
+
+
+.general-block2{
+    margin-left: 3%;        
+}
+    
+.general-block3{ 
+    margin-left: 3%;       
+}
+
+.block1-info, .block2-info , .block3-info {
+    font-size: 400%;
+    color:rgb(255, 229 , 33);
+
+}
+
+/*inicio*/
+ 
+.body-login {
+    background-color:  rgb(255, 229 , 33);
  }
- .tabla {
+ .photo-login {
+    
+     margin:0px;
+     width: 50%;
+     padding: 10px; 
+     float: left;  
+     text-align: justify;
+     height:80%;
+    height:100%;
+    position:absolute;
+     background-repeat:no-repeat;
+     background-image: url(https://crisescobar.files.wordpress.com/2018/06/imageninicio1.jpg);
+ 
+ }
+ 
+ .form-right {
+    
+     padding: 10px; 
+     float: right; 
+     width: 45%; 
+     text-align: justify;
+     background-color: rgb(255, 229 , 33);
+     height:700px;
+     padding-left:100px;
+ }
+  
+ #formulario {   
+     margin:160px 85px 120px; 
+     width: 300px;
+     max-width:500px;
+     background: #F3F3F3;
+     padding:30px;
+     border: 1px solid (rgba(0,0,0.2));
+     font-family: 'Bitter', serif;
+ }
+ 
+ h2 {
+     text-align:center;
+     margin-bottom:20px;
      color: black;
-     margin: 10px;
-     }
- 
- .nombre {
+ }
+  
+ #usuario, #contraseña, #entrar {
+     display:block;
+     padding:10px;
+     width:80%;
+     margin:20px 0;
+     font-size: 15px;
+     font-family: 'Bitter', serif;
+ }
+  
+ #entrar {
+     background: black;
+     color:white;
+     cursor: pointer;
+     font-family: 'Bitter', serif;
+     font-weight: 700;
+ }
+  
+ .entrar:hover {
+     background: rgb(51, 51, 51);
+ }
+  
+ .entrar:active {
+     transform: scale(0.95);
+ }
+  
+ .login-logo {
+     width: 80%;
+ }
+
+@media screen and (min-width: 480px) and (max-width: 798px) {
+
+  /* cabecera*/
+
+    .header {
+        margin-right:-2%;
+        padding-left: 1%;
+        padding-bottom: 5%;
+    }
+
+    .logo {          
+        padding-top: 2%;         
+        width:40%;
+        padding-left: 3%;
+        padding-right: 10%;
+    }
+
+    .block-header {
+        padding-left: 13%;
+    }
+    
+    .profilePhoto {
+        width:5%;
+        border-radius:20px;   
+    }
+      
+    .block-header, logo, profilePhoto {
+        display: inline;
+        font-family: 'Bitter', serif;
+        font-weight:700;
+        font-size: 80%;    
+    }
+
+    .sub-block {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    /*menu horizontal*/
+
+    .lateral-menu{
+        padding-top:1%;
+        margin-top:0px;
+        width:102%;
+        height:7%;
+        background-color:black;
+        color:#bcbcbc;
+        font-family: 'Bitter', serif;
+        font-weight:700;
+        border-left:0px;
+    }
+    
+    .menu-option1, .menu-option2{
+        margin-top:0px; 
+        width:130px;
+        display:inline-block;  
+    }
+    
+    .title-menu1, .title-menu2{
+        margin-top:3px;
+        margin-left:30px;
+        text-decoration:none;
+        color: white;
+    }
+
+    /*body*/
+
+    #seccion-alumnas, #seccion-general {
+        padding-top:12%;
+        
+        width:100%;
         color: black;
- }
+        margin-left: 0px;  
+    }
+
+    .title-alumnas, .title-general{  
+        padding-top: 1%;
+        padding-left: 2%;
+        font-size: 15px;
+        color: black;
+    }
+
+    .featured-photo {  /*alumnas imagen*/
+        background-image: url("http://www.color-hex.com/palettes/33778.png");
+        height: 50px;    
+    }
  
- #eligeuncohort {
-    margin: 10px;
-    color: rgb(255, 33, 188);
-   
- }
- #seccion-general{
-     display: none;
- }
+    /*  tabla */
  
+    th {   
+        padding-top:60%;                                                   
+        font-size: 70%;    
+        width: 40%;
+        font-weight: normal;    
+        padding: 0.5%;    
+        background-color : rgb(255, 229 , 33);
+        border-bottom: 5px solid #fff; 
+        padding-right: 10px;
+        padding-left: 10px;
+        font-family: 'Bitter', serif;
+        font-weight:700;
+    }
+
+    .scroll {
+        overflow: scroll;
+        width: 88%;
+        height:330px;
+        margin-top: 30px; 
+    }
+    
+
+    /* GENERAL */
+
  
+    
+    .block1-info, .block2-info, .block3-info {
+        font-family: 'Bitter', serif;
+        font-weight: 700;
+        font-size: 60px;   
+    }
  
- tr {
- text-align: center;
- background-color: #f0ecece5;
- }
+    .block1-info, .block2-info, .block3-info {
+        color:rgb(255, 229 , 33);
+        font-size: 50px;
+    }    
+}
+
+@media screen  and (min-width: 0px) and (max-width: 480px) {
+
+    /* cabecera*/
+
+    .header{
+        margin-right:-3%;
+        padding-bottom: 5%;
+    }
+
+    .logo {          
+        padding-top: 2%;      
+        padding-right: 2%;  
+        width:90%;
+        padding-left: 3%;   
+    }
+
+    .block-header {
+        padding-left: 30%;;
+        padding-right: 25%;
+        margin-right:5%;
+        border-right:8%px;
+        font-size:5px;   
+    }
+    
+    .profilePhoto {
+        width:21px;
+        border-radius:20px;   
+    }
+      
+    .block-header, profilePhoto {
+        display: inline;
+        font-family: 'Bitter', serif;
+        font-weight:700;
+        font-size: 70%;    
+    }
+
+    .line1, .line2 {
+        font-size:80%;
+    }
+
+    /*menu horizontal*/
+
+    .lateral-menu{
+        padding-top:2%;
+        margin-top:0px;
+        width:103%;
+        height:5%;
+        background-color:black;
+        color:#bcbcbc;
+        font-family: 'Bitter', serif;
+        font-weight:700;
+        border-left:0px;    
+    }
+       
+    .menu-option1, .menu-option2 {
+        margin-top:0%; 
+        display:inline-block; 
+        margin-left:16%; 
+        margin-right:1%;
+        width:80px;
+        height:20px; 
+    }
+
+    .menu-option2 {
+        padding-right:2%;
+    }
+     
+    .title-menu1, .title-menu2 {
+        color: white;
+        font-size:70%;
+    }
+
+    .title-menu2 {  
+        margin-left:0%;
+    }
+
+    /*body*/
+
+    #seccion-alumnas, #seccion-general {
+        padding-top:20%;
+        width:100%;
+        color: black;
+        margin-left: 0px; 
+    }
+
+    .title-alumnas, .title-general {  
+        padding-top: 1%;
+        padding-left: 2%;
+        font-size: 13px;
+        color: black;
+    }
+
+    .featured-photo {  /*alumnas imagen*/
+        background-image: url("http://www.color-hex.com/palettes/33778.png");
+        height: 30px;    
+    }
  
- #nombrestabla {
-    text-align: left;
- }
- 
+    /*  tabla */
+
+    th {                                                      
+        font-size: 70%;    
+        width: 40%;
+        font-weight: normal;    
+        padding: 0.5%;    
+        background-color : rgb(255, 229 , 33);; 
+        border-bottom: 5px solid #fff; 
+        padding-right: 10px;
+        padding-left: 10px;
+        font-family: 'Bitter', serif;
+        font-weight:700;
+    }
+
+    .listado {
+        font-size: 80%;
+    }
+
+    .scroll {
+        overflow: scroll;
+        width: 88%;
+        height:330px;
+        margin-top: 30px; 
+       
+    }
+
+    .select1, .select2, {
+        font-size:30px;
+    }
+
+    .select3, .select4, .search {
+        width:250px;
+    }
+
+  
+
+    /* GENERAL */
+
+    .general-title {
+        font-size: 40px;
+    }
+
+    .general-block1, .general-block2, .general-block3{
+        margin-top: 35px;
+        width: 50%;
+        background:rgb(232, 229, 229);
+        padding: 20px;
+        text-align: center;
+        height: 120px;
+        display:inline;
+        font-size: 13px;
+        display:block;
+    }
+
+    .general-block1 {     
+        margin-left: 5%;
+    }
+
+    .general-block2 {
+        margin-left: 6%;  
+    }
+    
+    .general-block3{ 
+        margin-left: 6%;     
+    }
+  
+    .block1-info, .block2-info, .block3-info {
+        font-family: 'Bitter', serif;
+        font-weight: 700;
+        font-size: 70px;
+        color:rgb(255, 229 , 33);  
+    }
+}

@@ -1,53 +1,109 @@
 <!DOCTYPE html>
 <html>
- <head id="head">
-   <meta charset="utf-8">
-   <title>Data Dashboard LABORATORIA</title>
-   <link rel="stylesheet" href="style.css" />
- </head>
-<div>
-<h1 class="titulo"> LaboDashboard>></h1>
-</div>
-</head>
+  <head lang="es-ES">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Dashboard LABORATORIA</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="https://crisescobar.files.wordpress.com/2018/06/loguis4.png">
+      <div class="block-header">
+        <img class="profilePhoto" src="https://crisescobar.files.wordpress.com/2018/06/alejandra.png">
+        <div class="sub-block">
+          <span class="line1">¡Hola Alejandra!</span>
+          <i class="fas fa-angle-down"></i>
+          <span class="line2">Tienes 1 mensaje <i class="fas fa-envelope"></i>
+          </span>
+        </div>
+      </div>
+    </div>
 
-<body>
- <div id="barra-lateral">
-    <div id="logo-menu">
-    </div>
-    <div id="contenedor-logos-primero" class="contenedor-logos">
-    <div class="logo1">
-    </div>
-   
-    <ul>
-    <li id="general" class="botonmenu"><a  href="#"><p class="title-menu"> General</p></a></li>
+    <div class="lateral-menu">
+      <div  class="menu-option1">
+        <div class="logo1"></div>
+        <span id="general">
+          <a href="#">
+            <p class="title-menu1">
+              <i class="fas fa-home"> </i> Home </p>
+          </a>
+        </span>
+      </div>
+      <div class="menu-option2">
+        <div class="logo2"></div>
+        <span id="alumnas">
+          <a href="#">
+            <p class="title-menu2">
+              <i class="fas fa-user"></i> Alumnas </p>
+          </a>
+        </span>
+      </div>
     </div>
 
-   <div class="contenedor-logos">
-   <div class="logo2">
-   </div>
-      <li id="alumnas" class="botonmenu"> <a  href="#"><p class="title-menu">Alumnas</p></a></li>
- </ul>
-   </div>
- </div>
-    <div id="seccion-alumnas" >
-     <p class= "imagendestacada" id="texto-contenedor-1"> Alumnas</p>
-     <p id="eligeuncohort"> Elige un cohort de la lista:</p>
-     <p> <select class="tabla" id="cohorts" ></select>
-     <p>  <table class="listado" id="nombre"></table> </p>
-   </div>
-   
-   
+    <div id="seccion-alumnas">
+      <div class="featured-photo">
+        <p class="title-alumnas"> Alumnas</p>
+      </div>
+      <p> <i class="fas fa-globe-americas"></i>
+        <select class="select1" id="country">
+          <option disabled selected hidden> Escoge tu sede </option>
+          <option value="lim">Lima</option>
+          <option value="cdmx">Ciudad de México</option>
+          <option value="gdl">Guadalara</option>
+          <option value="scl">Santiago de Chile</option>
+          <option value="otros">Otros</option>
+        </select>
+        
+        <select class="select2" id="cohort">
+          <option disabled selected hidden> Escoge tu cohort </option>
+        </select></p>
+
+        <p> <select class="select3" id="orderBy">
+          <option disabled selected hidden>Ordenar por:</option>
+          <option value="name">Nombres</option>
+          <option value="percent"> General % </option>
+          <option value="exercises"> Ejercicios % </option>
+          <option value="quizzes"> Quiz % </option>
+          <option value="scoreSum"> Score quiz</option>
+          <option value="scoreAvg">Promedio quizz </option>
+          <option value="reads"> Lecturas % </option>
+        </select>
+        
+        <select class="select4" id="order">
+          <option disabled selected hidden> ↓↑ Sentido</option>
+          <option value="ASC">Ascendente</option>
+          <option value="DESC">Descendente</option>
+        </select>
+       
+        <i class="fas fa-search"></i> <input class="search1" id="boxSearch" type="search" placeholder="Buscar...">  </p>
+      <div class="scroll">
+        <table class="listado" id="nombre"></table>
+      </div>
+    </div>
+
     <div id="seccion-general">
-    <p class= "imagendestacada" id="texto-contenedor-2"> General </p>
-    <p> Aquí se mostrarán los resultados generales </p>
-    </div>
+            <p class="general-title">¡Bienvenidx! <i class="fas fa-chalkboard-teacher"></i> </p> 
+            <img class="general-photo" src= "data:image/png;base64,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">
+            <p class="general-info">En LaboDashboard podrás encontrar la información principal del progreso académico de las estudiantes.  </p>
+            <div>
+                <span class="general-block1"> Obten promedios
+                  <p class="block1-info"><i class="fas fa-chart-line"></i></p>
+                </span>
+                <span class="general-block2"> Busca por alumna
+                  <p class="block2-info"><i class="fas fa-search"></i>
+                  </p>
+                </span>
+                <span class="general-block3"> Ordena los datos
+                  <p class="block3-info"><i class="fas fa-book"></i></p>
+                </span>
+              </div>
+      </div>
 
-
- </div>
-
- <script src="main.js"></script>
- <script src="data.js"></script></p>
- <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
- </body>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
-
