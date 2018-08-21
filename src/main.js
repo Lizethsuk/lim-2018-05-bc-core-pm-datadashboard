@@ -75,15 +75,15 @@ printData = (arrForPrint) => {
   return output;
 }
 
-chooseCountry.addEventListener('change', () => {                 //hacemos una funcion para agrupar por paises la lista de cohorts 
-  fetch('../data/cohorts.json')                                  //realizamos un fetch para obtener los datos de COHORTS.JSON
+chooseCountry.addEventListener('change', () => {                 
+  fetch('../data/cohorts.json')                                  
     .then(response => response.json())
-    .then(myCohorts => {                                       //En myCohorts estan todos los cohorts {}
-      let output = '';                                           //en output aparece la información 
-      for (nameCohort of myCohorts) {                           // hacemos un for of para obtener el nombre del cohort de la lista de cohorts
-        const cohortsIds = nameCohort.id;                       //creamos una nueva variable para almacenar el nombre del cohort que sera .id
-        const splitCohort = cohortsIds.split('-');              //creamos una variable y la almacenamos con el resultado de la variable anterior y le colocamos .split para que coinciden los valores, será separado por el -
-        if (splitCohort[0] === chooseCountry.value) {           //creamos una condicion, el valor del html debe coincidir con la posicion 0 del string separada por -
+    .then(myCohorts => {                                       
+      let output = '';                                           
+      for (nameCohort of myCohorts) {                           
+        const cohortsIds = nameCohort.id;                     
+        const splitCohort = cohortsIds.split('-');             
+        if (splitCohort[0] === chooseCountry.value) {        
           output +=
             `<option disabled selected hidden>Escoge tu cohort</option>
           <option value =${cohortsIds}>${cohortsIds}</option>`;       

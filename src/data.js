@@ -13,8 +13,8 @@ window.computeUsersStats = (users, progress, courses) => {
         let contadorActualExercises = 0;
         let contadorScoreSum = 0;
         scorePercent += progressUser[nameCourses].percent;
-        //console.log(scorePercent); 
-        const arrUnitsValues = Object.values(progressUser[nameCourses].units);
+        console.log(scorePercent); 
+        const arrUnitsValues = Object.values(progressUser[nameCourses ].units);
         //console.log(Object.keys(progressUser[course].units));
         arrUnitsValues.forEach(elementUnitsValues => {
           const partsElements = Object.values(elementUnitsValues.parts);
@@ -46,7 +46,7 @@ window.computeUsersStats = (users, progress, courses) => {
         user.stats = {
           percent: scorePercent,
           exercises: {
-            total: contadorTotalExercises,
+            total: contadorTotalExercises, 
             completed: contadorActualExercises,
             percent: Math.round(contadorActualExercises * 100)
           },
